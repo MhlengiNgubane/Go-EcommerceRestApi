@@ -8,7 +8,7 @@ import (
 	"github.com/mhlengi/Go-EcommerceRestApi/controllers"
 	"github.com/mhlengi/Go-EcommerceRestApi/database"
 	"github.com/mhlengi/Go-EcommerceRestApi/middleware"
-	"github.com/mhlengi/Go-EcommerceRestApi/routes"
+	"github.com/mhlengi/Go-Ecommerce/routes"
 )
 
 func main(){

@@ -1,7 +1,7 @@
 package routes
 
 import(
-	"github.com/mhlengi/Go-EcommerceRestApi/controllers"
+	"github.com/mhlengi/Go-Ecommerce/controllers"
 	"github.com/gin-gonic/gin"
 )
 

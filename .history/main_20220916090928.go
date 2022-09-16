@@ -5,10 +5,10 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mhlengi/Go-EcommerceRestApi/controllers"
-	"github.com/mhlengi/Go-EcommerceRestApi/database"
-	"github.com/mhlengi/Go-EcommerceRestApi/middleware"
-	"github.com/mhlengi/Go-EcommerceRestApi/routes"
+	"github.com/mhlengi/Go-Ecommerce/controllers"
+	"github.com/mhlengi/Go-Ecommerce/database"
+	"github.com/mhlengi/Go-Ecommerce/middleware"
+	"github.com/mhlengi/Go-Ecommerce/routes"
 )
 
 func main(){
