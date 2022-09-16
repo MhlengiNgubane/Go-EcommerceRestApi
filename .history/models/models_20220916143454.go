@@ -8,11 +8,11 @@ import(
 type User struct{
 
 	ID				primitive.ObjectID		`json:"_id" bson:"_id"`
-	First_Name		*string					`json:"first_name" validate:"required,min=2,max=30"`
-	Last_Name		*string					`json:"last_name" validate:"required,min=2,max=30"`
-	Password		*string					`json:"password" validate:"required,min=6"`
-	Email			*string					`json:"email" validate:"email, required"`
-	Phone			*string					`json:"phone" validate:"required"`
+	First_Name		*string					`json:"first_name"`
+	Last_Name		*string					`json:"last_name"`
+	Password		*string					`json:"password"`
+	Email			*string					`json:"email"`
+	Phone			*string					`json:"phone"`
 	Token			*string					`json:"token"`
 	Refresh_Token	*string					`json:"refresh_token"`
 	Created_At		time.Time				`json:"created_at"`
@@ -49,11 +49,11 @@ type Address struct{
 
 type Order struct{
 	Order_ID		primitive.ObjectID		`bson:"_id"`
-	Order_Cart		[]ProductUser			`json:"order_list" bson:"order_list"`
-	Ordered_At		time.Time				`json:"ordered_at" bson:"ordered_at"`
-	Price			int						`json:"total_price" bson:"total_price"`
-	Discount		*int					`json:"discount" bson:"discount"`
-	Payment_Method	Payment					`json:"payment_method" bson:"payment_method"`
+	Order_Cart		[]ProductUser			`json:"order_list" bson:""`
+	Orderd_At		time.Time
+	Price			int
+	Discount		*int
+	Payment_Method	Payment
 }
 
 type Payment struct{
