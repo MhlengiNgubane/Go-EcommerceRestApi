@@ -1,6 +1,8 @@
 package controllers
 
-import "github.com/mhlengi/Go-EcommerceRestApi/models"
+import(
+
+)
 
 func HashPassword(password string) string{
 
@@ -12,10 +14,7 @@ func VerifyPassword(userPassword string, givenPassword) (bool, string) {
 
 func SignUp() gin.HandlerFunc {
 	return func(c *gin.Context){
-		var ctx, cancel = context.WithTimeOut(context.Background(), 100*time.Second)
-		defer cancel()
-
-		var user models.User
+		var ctx
 	}
 }
 
