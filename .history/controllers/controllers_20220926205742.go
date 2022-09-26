@@ -37,11 +37,7 @@ func SignUp() gin.HandlerFunc {
 		if err != nil {
 			log.Panic(err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": })
-			return
-		}
-
-		if count > 0 {
-			c.JSON(http.StatusBadRequest, gin.H)
+			retu
 		}
 	}
 }

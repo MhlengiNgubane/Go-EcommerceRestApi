@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/mhlengi/Go-EcommerceRestApi/models"
@@ -23,25 +22,7 @@ func SignUp() gin.HandlerFunc {
 		var user models.User
 		if err := c.BindJSON(&user);
 		err != nil {
-			c.JSON{http.StatusBadRequest, gin.H{"error": err.Error()}}
-			return
-		}
-
-		validationErr := Validate.Struct(user)
-		if validationErr != nil {
-			c.JSON(http.StatusBadRequest, gin.H{"error": validationErr})
-			return
-		}
-
-		count, err := Collection.CountDocuments(ctx, bson.M{"email": user.Email})
-		if err != nil {
-			log.Panic(err)
-			c.JSON(http.StatusInternalServerError, gin.H{"error": })
-			return
-		}
-
-		if count > 0 {
-			c.JSON(http.StatusBadRequest, gin.H)
+			c.JSON{http.StatusBadRequest, gin.H{"err"}}
 		}
 	}
 }

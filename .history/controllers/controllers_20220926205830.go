@@ -40,9 +40,7 @@ func SignUp() gin.HandlerFunc {
 			return
 		}
 
-		if count > 0 {
-			c.JSON(http.StatusBadRequest, gin.H)
-		}
+		if count 
 	}
 }
 
