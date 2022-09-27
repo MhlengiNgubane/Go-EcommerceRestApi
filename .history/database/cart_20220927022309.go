@@ -1,8 +1,6 @@
-package database
+package controllers
 
-import( 
-	"errors"
-)
+import( "errors")
 
 var (
 
