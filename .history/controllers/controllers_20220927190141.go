@@ -46,12 +46,6 @@ func SignUp() gin.HandlerFunc {
 
 		count, err := UserCollection.CountDocuments(ctx, bson.M{"phone": user.Phone})
 		
-
-		defer cancel()
-		if err != nil {
-			log.Panic(err)
-			c.
-		}
 	}
 }
 

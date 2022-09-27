@@ -41,16 +41,7 @@ func SignUp() gin.HandlerFunc {
 		}
 
 		if count > 0 {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "user already exists"}) 
-		}
-
-		count, err := UserCollection.CountDocuments(ctx, bson.M{"phone": user.Phone})
-		
-
-		defer cancel()
-		if err != nil {
-			log.Panic(err)
-			c.
+			c.JSON(http.StatusBadRequest, gin.H{"error": "user already exi"})
 		}
 	}
 }

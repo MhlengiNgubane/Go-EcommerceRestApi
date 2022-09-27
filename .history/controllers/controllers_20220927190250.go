@@ -50,7 +50,6 @@ func SignUp() gin.HandlerFunc {
 		defer cancel()
 		if err != nil {
 			log.Panic(err)
-			c.
 		}
 	}
 }
