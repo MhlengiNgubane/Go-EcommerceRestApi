@@ -57,8 +57,6 @@ func SignUp() gin.HandlerFunc {
 		if count > 0 {
 			c.JSON(http.StatusBadRequest, gin.H{"error": "this phone no. is already used"}) 
 		}
-		password := HashPassword(*user.Password)
-		user.Password = &password
 	}
 }
 
