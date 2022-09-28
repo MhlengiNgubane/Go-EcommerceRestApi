@@ -1,11 +1,41 @@
 package controllers
 
 import( 
+	"time"
+	"context"
+	"errors"
+	"log"
+	"net/http"
 	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
-func AddToCart() gin.HandlerFunc{
+	type Application struct {
+		prodCollection *mongo.Collection
+		userCollection * mongo.Collection
+	}
 
+	func NewApplication(prodCollection, userCollection *mongo.Collection) *Application {
+		return &Application{
+			prodCollection: prodCollection,
+			userCollection: userProduction
+		}
+	}
+
+func (app *Application) AddToCart() gin.HandlerFunc{
+	return func(c *gin.Context){
+		productQueryID := c.Query("id")
+		if productQueryID == "" {
+			log.Println("product id is empty")
+			_ = c.AbortWithError(http.StatusBadRequest, errors.New("product id is empty"))
+		}
+
+		userQueryID := c.Query("userID")
+		if userQueryID == "" {
+			log.Println("user id is empty")
+			_ = c.AbortWithError(http.StatusBadRequest, errors)
+		}
+	}
 }
 
 func RemoveItem() gin.HandlerFunc{
