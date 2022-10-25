@@ -1,6 +1,8 @@
 package controllers
 
 import( 
+	"time"
+	"context"
 	"errors"
 	"log"
 	"net/http"
@@ -31,7 +33,7 @@ func (app *Application) AddToCart() gin.HandlerFunc{
 		userQueryID := c.Query("userID")
 		if userQueryID == "" {
 			log.Println("user id is empty")
-			_ = c.AbortWithError(http.StatusBadRequest, errors.New("user id is empty"))
+			_ = c.AbortWithError(http.StatusBadRequest, errors.New())
 		}
 	}
 }

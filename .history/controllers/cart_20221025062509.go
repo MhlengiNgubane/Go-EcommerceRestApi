@@ -1,6 +1,8 @@
 package controllers
 
 import( 
+	"time"
+	"context"
 	"errors"
 	"log"
 	"net/http"
@@ -16,7 +18,7 @@ import(
 	func NewApplication(prodCollection, userCollection *mongo.Collection) *Application {
 		return &Application{
 			prodCollection: prodCollection,
-			userCollection: userCollection,
+			userCollection: userPro,
 		}
 	}
 
@@ -31,7 +33,7 @@ func (app *Application) AddToCart() gin.HandlerFunc{
 		userQueryID := c.Query("userID")
 		if userQueryID == "" {
 			log.Println("user id is empty")
-			_ = c.AbortWithError(http.StatusBadRequest, errors.New("user id is empty"))
+			_ = c.AbortWithError(http.StatusBadRequest, errors)
 		}
 	}
 }
