@@ -108,8 +108,6 @@ func (app *Application) BuyFromCart() gin.HandlerFunc {
 			log.Panicln("user id is empty")
 			_ = c.AbortWithError(http.StatusBadRequest, errors.New("UserID is empty"))
 		}
-
-		
 	}
 }
 

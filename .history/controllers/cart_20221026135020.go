@@ -100,17 +100,8 @@ func GetItemFromCart() gin.HandlerFunc {
 
 }
 
-func (app *Application) BuyFromCart() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		userQueryID := c.Query("id")
+func  BuyFromCart() gin.HandlerFunc {
 
-		if userQueryID == "" {
-			log.Panicln("user id is empty")
-			_ = c.AbortWithError(http.StatusBadRequest, errors.New("UserID is empty"))
-		}
-
-		
-	}
 }
 
 func (app *Application) InstantBuy() gin.HandlerFunc {
