@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/mhlengi/Go-EcommerceRestApi/database"
-	"github.com/mhlengi/Go-EcommerceRestApi/models"
-	generate "github.com/mhlengi/Go-EcommerceRestApi/tokens"
+	"github.com/akhil/ecommerce-yt/database"
+	"github.com/akhil/ecommerce-yt/models"
+	generate "github.com/akhil/ecommerce-yt/tokens"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"

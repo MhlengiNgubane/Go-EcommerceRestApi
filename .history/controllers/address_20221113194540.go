@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
+
 	"github.com/gin-gonic/gin"
-	"github.com/mhlengi/Go-EcommerceRestApi/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

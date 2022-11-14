@@ -7,8 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/mhlengi/Go-EcommerceRestApi/database"
-	"github.com/mhlengi/Go-EcommerceRestApi/models"
+	
 	generate "github.com/mhlengi/Go-EcommerceRestApi/tokens"
 
 	"github.com/gin-gonic/gin"

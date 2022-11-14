@@ -6,7 +6,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/mhlengi/Go-EcommerceRestApi/models"
+	"github.com/akhil/ecommerce-yt/models"
+
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
